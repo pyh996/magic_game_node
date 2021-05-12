@@ -1,0 +1,40 @@
+{
+  "name": "magic_game_node",
+  "version": "1.0.4",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev:build": "tsc -w",
+    "dev:start": "node ./dist/index.js",
+    "dev": "tsc && node ./dist/index.js"
+  },
+  "bin": {
+    "magic_game_node": "./dist/index.js"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "data/*"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/cheerio": "^0.22.14",
+    "@types/express": "^4.17.9",
+    "@types/superagent": "^4.1.4",
+    "concurrently": "^5.0.0",
+    "nodemon": "^2.0.1",
+    "ts-node": "^8.5.2",
+    "typescript": "^3.7.2"
+  },
+  "dependencies": {
+    "@types/commander": "^2.12.2",
+    "@types/inquirer": "^7.3.1",
+    "@types/prompt": "^1.1.0",
+    "commander": "^7.2.0",
+    "import-local": "^3.0.2",
+    "inquirer": "^7.3.3",
+    "prompt": "^1.1.0"
+  }
+}
