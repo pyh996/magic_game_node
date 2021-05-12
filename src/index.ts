@@ -64,11 +64,13 @@ async function game_main() {
             process.stdout.write(item + "   ")
         }
     }
+    console.log(color_str("purple", "我们的文明,每一个数字背后都代表一个图腾,我已画好了对应关系,请你把默念的数字所对应的图腾画在记在心里,让我预测一下~"))
     await inquirer.prompt({
         type: 'input',
         name: "waite",
         message: color_str("orange", '您选择好了么,来让我预言下~~')
     })
+
     console.log(color_str("yellow", "------------------------------"))
     console.log(color_str("yellow", "------------------------------"))
     console.log(color_str("yellow", "------------------------------"))

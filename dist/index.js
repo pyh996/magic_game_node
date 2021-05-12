@@ -53,7 +53,7 @@ function Random(min, max) {
 //注册命令
 function registerCommend() {
     program
-        .version('0.0.1', '-v, --version')
+        .version('1.0.4', '-v, --version')
         // 开始游戏命令
         .option('-s, --start', 'Add peppers');
     program.on('option:start', function () {
@@ -92,6 +92,7 @@ function game_main() {
                         else {
                             item = i + ":" + list1[index1];
                         }
+                        // 输出换行逻辑
                         if (i % 5 == 0 && i > 4) {
                             process.stdout.write(item + "\n");
                             process.stdout.write("\n");
@@ -100,6 +101,7 @@ function game_main() {
                             process.stdout.write(item + "   ");
                         }
                     }
+                    console.log(color_str("purple", "我们的文明,每一个数字背后都代表一个图腾,我已画好了对应关系,请你把默念的数字所对应的图腾画在记在心里,让我预测一下~"));
                     return [4 /*yield*/, inquirer.prompt({
                             type: 'input',
                             name: "waite",
